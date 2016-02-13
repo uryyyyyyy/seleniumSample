@@ -15,6 +15,7 @@ class HelloTest extends FlatSpec with Matchers with WebBrowser {
 	"The blog app home page" should "have the correct title" in {
 		go.to(host)(webDriver)
 		pageTitle(webDriver) should be ("Qiita - A technical knowledge sharing platform for programmers.")
+		quit()(webDriver)
 	}
 
 	"Hello" should "have tests" in {
